@@ -3,14 +3,14 @@ const SteamAPI = require('steamapi');
 const steam = new SteamAPI('EC4E8B36737A5B4E067C1F0C2CF985A4');
 const bodyParser = require('body-parser');
 const app = express();
-const PORT = 8000;
+const PORT = 80;
 const APIKEY = 'EC4E8B36737A5B4E067C1F0C2CF985A4';
 const cors = require('cors');
 const path = require('path');
 
 
 var corsOptions = {
-    origin: 'http://localhost:4200',
+    origin: 'http://localhost:80',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
 }
 

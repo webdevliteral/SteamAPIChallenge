@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WeatherApp": {
+    "PortfolioApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/WeatherApp",
+            "outputPath": "dist/PortfolioApp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "WeatherApp:build"
+            "browserTarget": "PortfolioApp:build",
+            "port": 80
           },
           "configurations": {
             "production": {
-              "browserTarget": "WeatherApp:build:production"
+              "browserTarget": "PortfolioApp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "WeatherApp:build"
+            "browserTarget": "PortfolioApp:build"
           }
         },
         "test": {
@@ -113,16 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "WeatherApp:serve"
+            "devServerTarget": "PortfolioApp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "WeatherApp:serve:production"
+              "devServerTarget": "PortfolioApp:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "WeatherApp"
+  "defaultProject": "PortfolioApp"
 }
