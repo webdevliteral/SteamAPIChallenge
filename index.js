@@ -1,9 +1,11 @@
+import config from './config';
+
 const express = require('express');
 const SteamAPI = require('steamapi');
 const steam = new SteamAPI('EC4E8B36737A5B4E067C1F0C2CF985A4');
 const bodyParser = require('body-parser');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const { PORT } = config;
 const APIKEY = 'EC4E8B36737A5B4E067C1F0C2CF985A4';
 const cors = require('cors');
 const path = require('path');
