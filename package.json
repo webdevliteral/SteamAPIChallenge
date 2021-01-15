@@ -7,7 +7,7 @@
     "client-install": "npm install --prefix client",
     "start": "node index.js",
     "client": "npm start --prefix client",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix Client && ng build --prefix Client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix Client && npm run build --prefix Client"
   },
   "engines": {
     "node": "14.15.3"
