@@ -11,7 +11,7 @@ export class AppComponent{
 
   constructor(private _http: HttpService) {}
   //results: any[] = [];
-  title = 'SteamSuggest';
+  title = 'Devin Wood | Portfolio';
   //curSearch: string = '';
   //newSearch: string = '';
   //hasSearched: boolean = false;
