@@ -4,7 +4,7 @@
   "description": "A simple steam api tool.",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix Client && npm run build --prefix Client"
   },
   "author": "Devin Wood",
   "license": "ISC",
