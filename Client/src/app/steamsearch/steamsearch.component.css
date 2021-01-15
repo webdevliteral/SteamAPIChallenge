@@ -1,0 +1,85 @@
+.searchform {
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+    padding: 1em;
+}
+
+input {
+    display: block;
+    text-align: center;
+    margin-top: .5em;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.result-card {
+    background-color: rgba(50, 50, 50, 01);
+    margin: 7px auto;
+    border: 1px solid white;
+    box-shadow: 0px 0px 5px black;
+    width: 256px;
+    text-align: center;
+}
+
+.result-card img {
+    width: 100%;
+}
+
+.result-card a {
+    transition: .5s ease;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 2em;
+    background-color: white;
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.result-card a:hover {
+    transition: .5s ease;
+    background-color: rgb(236, 221, 78);
+}
+
+.result-card h1 {
+    padding: .5em;
+    color: white;
+    font-size: 15px;
+}
+
+.user-info {
+    display: flex;
+    height: 64px;
+    border: 1px solid black;
+    background: rgba(50, 50, 50, 1);
+    color: white;
+    justify-content: space-between;
+}
+
+.user-info h1 {
+    font-size: 20px;
+    padding: 1em;
+}
+
+.game-library{
+    height: 30em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 15px auto;
+    overflow-y: scroll;
+}
+
+.suggestions-box {
+    display: flex;
+    margin-bottom: 1em;
+}

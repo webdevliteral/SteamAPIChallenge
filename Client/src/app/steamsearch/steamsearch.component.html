@@ -1,0 +1,42 @@
+<div class="main_container">
+    <div class="searchform">
+        <h1>Please enter your your unique steam URL</h1>
+        <input type="text" name="uidsearch" autocomplete="off" [(ngModel)]="steamURL">
+        <input type="submit" value="Suggest Games" (click)=getSteamInfo()>
+    </div>
+    <div class="results-container">
+        <div class="graph-wrapper">
+
+        </div>
+        <div class="user-info">
+            <img src={{steamUserObject.avatar.medium}}>
+            <h1 *ngIf=steamUserObject>Username: {{steamUserObject.nickname}}</h1>
+            <!-- <h1 *ngIf=steamUserObject>{{steamUserObject.steamID}}</h1> -->
+            <h1 *ngIf=steamUserObject>Name: {{steamUserObject.realName}}</h1>
+            <h1 *ngIf=steamUserObject>Country: {{steamUserObject.countryCode}}</h1>
+        </div>
+        <div class="games-wrapper">
+            <ng-container *ngIf="suggestedGames">
+                <h1 *ngIf="suggestedGames">Suggested For You:</h1>
+                <div class="suggestions-box">
+                    <div class="suggestion-item result-card" *ngFor="let suggestion of suggestedGames">
+                        <h1>{{suggestion.name}}</h1>
+                    </div>
+                </div>
+            </ng-container>
+            <h1 *ngIf="steamUserObject">Your Game Library:</h1>
+            <div class="game-library">
+                <ng-container *ngIf=sortedGames>
+                    <div *ngFor="let game of sortedGames" class="result-card">
+                        <img src={{game.logoURL}}>
+                        <h1>{{game.name}}</h1>
+                        <h1>Total hours played: {{game.playTime}}</h1>
+                        <h1>Hours played recently: {{game.playTime2}}</h1>
+                        <a href="#">Launch Game</a>
+                        <!-- link for game launch: {{getSanitizedUrl('steam://run/'+game.appID)}} -->
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
