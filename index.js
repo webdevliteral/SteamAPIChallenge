@@ -26,7 +26,7 @@ if(process.env.NODE_ENV === 'production') {
   });
 }
 
-app.get('/', (req,res) => res.send('Express + TypeScript Server'));
+/* app.get('/', (req,res) => res.send('Express + TypeScript Server')); */
 
 
 app.route('/steamsearch/:name').get((req, res) => {
