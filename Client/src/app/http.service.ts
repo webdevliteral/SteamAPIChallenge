@@ -10,7 +10,7 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   getSteamInfo(steamURL: string) {
-    return this.http.get<any>('/'+ steamURL), {responseType: 'text'};
+    return this.http.get<any>('/'+ steamURL);
   }
 
   //getUserLibrary(){};
