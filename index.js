@@ -19,10 +19,10 @@ app.use(bodyParser.json());
 
 if(process.env.NODE_ENV === 'production') {
   //static folder
-  app.use(express.static(__dirname + '/client/dist/PortfolioApp'));
+  app.use(express.static(__dirname + '/Client/dist/PortfolioApp'));
 
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+ '/client/dist/PortfolioApp/index.html'));
+    res.sendFile(path.join(__dirname+ '/Client/dist/PortfolioApp/index.html'));
   });
 }
 
