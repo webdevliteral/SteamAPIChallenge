@@ -74,3 +74,15 @@ h1 {
         height: 10rem;
     }
 }
+
+@media only screen and (min-width: 1200px) {
+    .main_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .projects-container{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+}

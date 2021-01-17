@@ -1,6 +1,7 @@
 <div class="main_container">
     <div class="searchform">
-        <h1>Please enter your your unique steam URL</h1>
+        <h1>Please enter your unique steam name, found at the end of your Steam URL</h1>
+        <h3>Example: <del>https://steamcommunity.com/id/</del>MySteamURL/</h3>
         <input type="text" name="uidsearch" autocomplete="off" [(ngModel)]="steamURL">
         <input type="submit" value="Suggest Games" (click)=getSteamInfo()>
     </div>
