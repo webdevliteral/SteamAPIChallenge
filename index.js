@@ -32,17 +32,17 @@ app.route('/steamsearch/:name').get((req, res) => {
     });
 });
 
-if(process.env.NODE_ENV === 'production') {
+//if(process.env.NODE_ENV === 'production') {
   //static folder
   app.use(express.static(__dirname + '/Client/dist/PortfolioApp'));
 
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname+ '/Client/dist/PortfolioApp/index.html'));
   });
-}
-else {
+//}
+/* else {
   app.get('/', (req,res) => res.send('Express + TypeScript Server'));
-}
+} */
 
 app.listen(PORT, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
